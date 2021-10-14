@@ -81,12 +81,12 @@ const ParamsRender = ({ params }) => {
   return null;
 };
 
-const SSOTrender = () => {
+const SSOTrenderRepoTwo = () => {
   const { getCollapseProps, getToggleProps, isExpanded } = useCollapse();
 
   const data = useStaticQuery(graphql`
-    query hello {
-      allFile(filter: { sourceInstanceName: { eq: "repo-one" } }) {
+    query SecondRepo {
+      allFile(filter: { sourceInstanceName: { eq: "repo-two" } }) {
         edges {
           node {
             extension
@@ -184,4 +184,4 @@ const SSOTrender = () => {
   });
 };
 
-export default SSOTrender;
+export default SSOTrenderRepoTwo;
